@@ -1,13 +1,88 @@
-<html>
-    <head>
-
-    </head>
-    <body>
-        <ul>
-            <li>
-                <a href="tp1">TP 1</a>
-            </li>
-       
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Trabajos Prácticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        main {
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #4CAF50;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Índice de Trabajos Prácticos</h1>
+    </header>
+    <main>
+        <ul id="index-list">
+            <!-- Aquí puedes agregar tus hipervínculos -->
+            <!-- Ejemplo: <li><a href="enlace-del-trabajo">Título del Trabajo</a></li> -->
         </ul>
-    </body>
+    </main>
+    <footer>
+        &copy; 2024 Tu Nombre
+    </footer>
+    <script>
+        const trabajos = [
+            { titulo: "Trabajo Práctico 1", url: "enlace-del-trabajo1" },
+            { titulo: "Trabajo Práctico 2", url: "enlace-del-trabajo2" }
+            // Agrega más trabajos aquí
+        ];
+
+        const indexList = document.getElementById('index-list');
+        trabajos.forEach(trabajo => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = trabajo.url;
+            link.textContent = trabajo.titulo;
+            listItem.appendChild(link);
+            indexList.appendChild(listItem);
+        });
+    </script>
+</body>
 </html>
