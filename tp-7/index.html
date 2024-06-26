@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP-7: Funciones en JavaScript</title>
+</head>
+<body>
+    <p>Completar con la implementación de las funciones correspondientes</p>
+    <script type="text/javascript">
+
+        function suma(num1, num2) {
+            return num1 + num2;
+        }
+
+        console.log("suma(2,3): ", suma(2,3));
+
+
+        const elevarAlCubo = function(num) {
+            return num ** 3;
+        };
+
+        console.log("elevarAlCubo(3): ", elevarAlCubo(3));
+
+
+        const restoDivisionEntera = (dividendo, divisor) => {
+            return dividendo % divisor;
+        };
+
+        console.log("restoDivisionEntera(3,2): ", restoDivisionEntera(3,2));
+
+
+        
+        function numeroPi() {
+            return Math.PI;
+        }
+
+        console.log("numeroPi(): ", numeroPi());
+
+
+        const numeroRandom = function() {
+            return Math.random();
+        };
+
+        console.log("numeroRandom(): ", numeroRandom());
+
+
+        const mejorNumeroRandom = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+        console.log("mejorNumeroRandom(1,6): ", mejorNumeroRandom(1,6));
+
+
+        function transformarMayuscula(palabra) {
+            return palabra.toUpperCase();
+        }
+
+        console.log("transformarMayuscula(\"Plataformas Móviles\"): ", transformarMayuscula("Plataformas Móviles"));
+
+
+        const primeraLetra = function(palabra) {
+            return palabra.charAt(0);
+        };
+
+        console.log("primeraLetra(\"Plataformas\"): ", primeraLetra("Plataformas"));
+
+
+        const ultimaLetra = palabra => {
+            return palabra.charAt(palabra.length - 1);
+        };
+
+        console.log("ultimaLetra(\"Plataformas\"): ", ultimaLetra("Plataformas"));
+
+
+        function primeraLetraMayuscula(palabra) {
+            return palabra.charAt(0).toUpperCase() + palabra.slice(1);
+        }
+
+        console.log("primeraLetraMayuscula(\"plataformas\"): ", primeraLetraMayuscula("plataformas"));
+
+
+        const palabraAListaDeLetras = function(palabra) {
+            return palabra.split('');
+        };
+
+        console.log("palabraAListaDeLetras(\"hola\"): ", palabraAListaDeLetras("hola"));
+
+
+        const listadoDeLetrasAPalabra = lista => {
+            return lista.join('');
+        };
+
+        console.log("listadoDeLetrasAPalabra([\"h\", \"o\", \"l\", \"a\"]): ", listadoDeLetrasAPalabra(["h", "o", "l", "a"]));
+
+
+        function palabraInvertida(palabra) {
+            return palabra.split('').reverse().join('');
+        }
+
+        console.log("palabraInvertida(\"hola\"): ", palabraInvertida("hola"));
+
+    </script>
+</body>
+</html>
